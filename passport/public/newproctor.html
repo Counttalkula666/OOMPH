@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>New Proctor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Add new proctor</h2>
+        <form class="newproctor">
+          
+              
+            <!-- Proctor full name
+            Proctor institution
+            Proctor institution email address (can't be a personal email address)
+            Proctor institution phone number (can't be a personal phone number) -->
+          <div class="form-group">
+            <label for="exampleInputProctorName">Proctor full name</label>
+                <input type="text" class="form-control" id="PN-input" placeholder="Proctor full name">
+              </div> 
+
+          <div class="form-group">
+            <label for="exampleInputPI">Proctor institution</label>
+                <input type="text" class="form-control" id="PI-input" placeholder="Proctor institution">
+              </div> 
+              
+          <div class="form-group">
+            <label for="exampleInputProctorEmail">Proctor institution email address</label>
+                <input type="text" class="form-control" id="PE-input" placeholder="Proctor institution email address">
+              </div> 
+
+          <div class="form-group">
+            <label for="exampleInputProctorPhone">Proctor institution phone number</label>
+                <input type="text" class="form-control" id="PP-input" placeholder="Proctor institution phone number">
+              </div> 
+              <div class="form-group">
+                  <label for="exampleInputProctorRelationship">Proctor Relationship: </label>
+              <select name="ProctorRelationship">
+                <option value="Professional">Professional proctor</option>
+                <option value="educator">Educator</option>
+                <option value="librarian">Librarian</option>
+                <option value="doctor">Doctor</option>
+                <option value="HRM">Human Resources Manager</option>
+              </select>
+            </div>
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="form-group">
+            <label for="exampleInputEmail1">Your Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div> -->
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+        <br />
+        <!-- <p>Or log in <a href="/login">here</a></p> -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/newproctor.js"></script>
+
+</body>
+
+</html>
