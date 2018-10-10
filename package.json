@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Counttalkula666/OOMPH#readme",
   "dependencies": {
-    "enquirer": "^1.0.3"
+    "enquirer": "^1.0.3",
+    "express": "^4.16.3"
   }
 }
