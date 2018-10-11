@@ -4,6 +4,8 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+const path = require("path");
+// const app = express();
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
@@ -18,6 +20,16 @@ app.use(express.static("public"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
