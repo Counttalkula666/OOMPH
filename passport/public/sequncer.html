@@ -2,25 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Course sequencer</title>
+  <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
@@ -92,10 +74,10 @@
     <link rel='shortlink' href='https://onlinemph.berkeley.edu/' />
     <link rel="alternate" type="application/json+oembed" href="https://onlinemph.berkeley.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fonlinemph.berkeley.edu%2F" />
     <link rel="alternate" type="text/xml+oembed" href="https://onlinemph.berkeley.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fonlinemph.berkeley.edu%2F&#038;format=xml" />
-    <!-- <script type="text/javascript">
-    var kc_script_data={ajax_url:"https://onlinemph.berkeley.edu/wp-admin/admin-ajax.php"}</script> -->
+    <!-- <script type="text/javascript">var kc_script_data={ajax_url:"https://onlinemph.berkeley.edu/wp-admin/admin-ajax.php"}</script> -->
 
-    <script>var ms_grabbing_curosr='https://onlinemph.berkeley.edu/wp-content/plugins/masterslider/public/assets/css/common/grabbing.cur',ms_grab_curosr='https://onlinemph.berkeley.edu/wp-content/plugins/masterslider/public/assets/css/common/grab.cur';</script>
+    <script>
+    var ms_grabbing_curosr='https://onlinemph.berkeley.edu/wp-content/plugins/masterslider/public/assets/css/common/grabbing.cur',ms_grab_curosr='https://onlinemph.berkeley.edu/wp-content/plugins/masterslider/public/assets/css/common/grab.cur';</script>
     <meta name="generator" content="MasterSlider 2.29.0 - Responsive Touch Image Slider" />
     <script type="text/javascript">
             /* <![CDATA[ */
@@ -196,7 +178,35 @@
     </header>
 
   
-   
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        
+        <form class="signup">
+          <div class="form-group">
+            <label for="exampleInputFN">First Name</label>
+            <input type="text" class="form-control" id="FN-input" placeholder="First Name">
+          </div><div class="form-group">
+            <label for="exampleInputLN">Last Name</label>
+            <input type="text" class="form-control" id="LN-input" placeholder="Last Name">
+          </div><div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+        <br />
+        <p>Or log in <a href="/login.html">here</a></p>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
