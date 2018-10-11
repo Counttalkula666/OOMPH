@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "Opt Out",
+    "title": "Take no course for Summer 2"
+  },
+  {
+    "id": 1,
+    "name": "PHW204",
+    "title": "Mass Communications in Public Health"
+  },
+  {
+    "id": 2,
+    "name": "PHW206",
+    "title": "Maternal Child Health Nutrition"
+  },
+  {
+    "id": 3,
+    "name": "PHW227A",
+    "title": "Healthcare Finance"
+  }
+]

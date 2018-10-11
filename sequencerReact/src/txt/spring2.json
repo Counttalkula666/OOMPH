@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "Opt Out",
+    "title": "Take no course for Spring 2"
+  },
+  {
+    "id": 1,
+    "name": "PHW142",
+    "title": "Introduction to Probability and Statistics"
+  },
+  {
+    "id": 2,
+    "name": "PHW219",
+    "title": "Social & Behavioral Health: Intro to Survey Methods"
+  },
+  {
+    "id": 3,
+    "name": "PHW223",
+    "title": "Strategic Management and the Health Sector"
+  },
+  {
+    "id": 4,
+    "name": "PHW272B",
+    "title": "GIS for Public Health Practice (new course)"
+  }
+]

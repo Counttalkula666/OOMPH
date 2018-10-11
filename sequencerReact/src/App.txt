@@ -1,0 +1,830 @@
+import React, {Component} from "react";
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+// import React from "react";
+//import TermSequence from "./components/TermSequence";
+import CourseListing from "./components/CourseListing";
+
+import fall1 from "./txt/fall1.json";
+import fall2 from "./txt/fall2.json";
+import spring1 from "./txt/spring1.json";
+import spring2 from "./txt/spring2.json";
+import summer1 from "./txt/summer1.json";
+import summer2 from "./txt/summer2.json";
+
+
+var fall1Courses=fall1;
+var fall2Courses=fall2;
+var spring1Courses=spring1;
+var spring2Courses=spring2;
+var summer1Courses=summer1;
+var summer2Courses=summer2;
+
+var currentTerm=fall1Courses;
+var years =[2019,2020,2021,2022,2023,2024.2025,2026,2027,2028];
+var unitsLeft=5;
+
+var terms = ["Fall 1","Fall 2","Spring 1","Spring 2","Summer 1","Summer 2"];
+var seqs=[];
+var courseString="";
+
+function SequenceThis (term, year, course)
+{
+    this.term=term;
+    this.year=year;
+    this.course=course;
+}
+class App extends Component {
+    
+    // Setting the initial state of the Counter component
+    state = {
+      fall1,fall2,
+      spring1,spring2,
+      summer1,summer2,
+      curID:0,
+      currentCourse: 0,
+      curTerm: 0,
+      curYear:0
+    };
+    changeCourseX = (id) => {
+        console.log(id)
+        this.setState({curID: id})
+        console.log(this.state.id)
+    };
+    changeCourse = id => {
+        console.log(fall1Courses)
+        this.setState({curID: id})
+        console.log(this.state.curID)
+        
+      };
+    changeTerm = id => {
+        if(unitsLeft===0)return;
+        var newSeq = new SequenceThis(terms[this.state.curTerm],years[this.state.curYear],courseString)
+        seqs.push(newSeq);
+        
+        if(this.state.curID!==0)
+        {
+            unitsLeft--;
+            
+        }
+        this.setState({currentCourse: 0});
+        this.setState({curID: 0});
+        if(this.state.curTerm<terms.length-1)
+           { 
+               this.setState({ curTerm: this.state.curTerm + 1 });
+            }
+        else {
+            this.setState({ curTerm: 0})
+        }
+        if(this.state.curTerm===1)
+            this.setState({ curYear: this.state.curYear + 1 });
+        switch(id)
+            {
+                case 0:
+                    currentTerm=fall1Courses;
+                    break;
+                case 1:
+                    currentTerm=fall2Courses;
+                    break;
+                case 2:
+                    currentTerm=spring1Courses;
+                    break;
+                case 3:
+                    currentTerm=spring2Courses;
+                    break;
+                case 4:
+                    currentTerm=summer1Courses;
+                    break;
+                case 5:
+                    currentTerm=summer2Courses;
+                    break;    
+                default:
+                    currentTerm=[];
+            }
+        };
+    render(){
+        return (
+            
+            <div className="container jumbotron jumbotron-fluid">
+            
+                <div className="row">
+                    <div className="col">
+                    <h1>Sequence</h1><hr></hr>
+                    
+                    
+                    <h3>{terms[this.state.curTerm]}, {years[this.state.curYear]}</h3>
+                    
+                    {this.state.curTerm===0 && <p>{courseString=fall1[this.state.curID].name+": "+fall1[this.state.curID].title}</p>}
+
+                   
+                    {this.state.curTerm===1 && <p>{courseString=fall2[this.state.curID].name+": "+fall2[this.state.curID].title}</p>}
+
+                   
+                    {this.state.curTerm===2 && <p>{courseString=spring1[this.state.curID].name+": "+spring1[this.state.curID].title}</p>}
+
+                    
+                    {this.state.curTerm===3 && <p>{courseString=spring2[this.state.curID].name+" "+spring2[this.state.curID].title}</p>}
+
+                   
+                    {this.state.curTerm===4 && <p>{courseString=summer1[this.state.curID].name+": "+summer1[this.state.curID].title}</p>}
+
+                    
+                    {this.state.curTerm===5 && <p>{courseString=summer2[this.state.curID].name+": "+summer2[this.state.curID].title}</p>} 
+                    <span onClick={() => this.changeTerm(this.state.curTerm)} className="btn btn-primary">
+      Next Term
+    </span>
+                    <hr/>
+                    <h5>Units left until graduation: {unitsLeft}</h5>
+                    {seqs.map(seq => (<p>
+                        {seq.term},  {seq.year}: {seq.course}</p>))}
+                    </div>
+                    
+                    <div className="col">
+                    <h1>Course Listings</h1><hr></hr>
+                    <h3>{terms[this.state.curTerm]}</h3>
+
+                    <Wrapper>
+                    {/* <Title>Friends List</Title> */}
+                    {this.state.curTerm===0 && currentTerm.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===1 && currentTerm.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===2 && currentTerm.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                       
+                    />
+                    ))}
+                    {this.state.curTerm===3 && currentTerm.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===4 && this.state.summer1.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===5 && this.state.summer2.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                </Wrapper>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+}
+export default App;
+///////////////////////////////////////////////////
+
+
+import React, {Component} from "react";
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./components/Wrapper";
+// import Title from "./components/Title";
+// import React from "react";
+//import TermSequence from "./components/TermSequence";
+// import CourseListing from "./components/CourseListing";
+
+import fall1 from "./txt/fall1.json";
+import fall2 from "./txt/fall2.json";
+import spring1 from "./txt/spring1.json";
+import spring2 from "./txt/spring2.json";
+import summer1 from "./txt/summer1.json";
+import summer2 from "./txt/summer2.json";
+
+var fall1Courses=fall1;
+var fall2Courses=fall2;
+var spring1Courses=spring1;
+var spring2Courses=spring2;
+var summer1Courses=summer1;
+var summer2Courses=summer2;
+
+// var currentTerm=fall1Courses;
+var ct=0;
+var cc=0;
+var cy=0;
+
+var projectedTerm=0;
+var projectedYear=0;
+var years =[2019,2020,2021,2022,2023,2024.2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2038];
+
+var unitsLeft=14;
+
+var terms = ["Fall 1","Fall 2","Spring 1","Spring 2","Summer 1","Summer 2"];
+var seqs=[];
+var courseString="";
+
+function SequenceThis (term, year, course)
+{
+    this.term=term;
+    this.year=year;
+    this.course=course;
+}
+class App extends Component {
+    
+    // Setting the initial state of the Counter component
+    state = {
+      fall1,fall2,
+      spring1,spring2,
+      summer1,summer2,
+      curID:0,
+      currentCourse: 0,
+      curTerm: 0,
+      curYear:0
+    };
+    projectGrad =() =>
+    {
+        // projectedTerm=0;
+        // projec
+      for(var i=0;i<unitsLeft;i++)
+      {
+            if(projectedTerm===5){
+                projectedTerm=0
+            }
+            else {
+                projectedTerm++
+            }
+            // if(projectedTerm===2)
+            // {
+            //     projectedYear++;
+            // }
+      }
+      console.log(terms[projectedTerm]+", "+years[projectedYear]);
+      return (terms[projectedTerm]+", "+years[projectedYear]);
+    }
+    changeCourse = id => {
+        //console.log(id)
+        cc=id;
+        this.setState({curID: id})
+        //console.log(this.state.curID)
+        
+      };
+    changeTerm = () => {
+        if(unitsLeft===0)return;
+        var newSeq = new SequenceThis(terms[this.state.curTerm],years[this.state.curYear],courseString)
+        seqs.push(newSeq);
+        if(cc!==0)
+        {
+            unitsLeft--;
+            //console.log("term "+ct)
+            switch (ct)
+            {
+                case 0:
+                    fall1Courses.splice(cc,1);
+                break;
+                case 1:
+                    fall2Courses.splice(cc,1);
+                break;
+                case 2:
+                    spring1Courses.splice(cc,1);
+                break;
+                case 3:
+                    spring2Courses.splice(cc,1);
+                break;
+                case 4:
+                    summer1Courses.splice(cc,1);
+                break;
+                case 5:
+                    summer2Courses.splice(cc,1);
+                break;
+                default:
+                //
+            }
+        }
+        this.setState({currentCourse: 0});
+        this.setState({curID: 0});
+        if(this.state.curTerm<terms.length-1){ 
+               this.setState({ curTerm: this.state.curTerm + 1 });
+               ct++;
+               
+        }
+        else {
+            this.setState({ curTerm: 0})
+            ct=0;
+        }
+        // ct=this.state.curTerm;
+        if(ct===2){
+            this.setState({ curYear: this.state.curYear + 1 });
+             cy++;
+        }
+        //this.projectGrad();
+      };
+     
+    render(){
+        return (
+            
+            <div className="container jumbotron ">
+            
+                <div className="row">
+                    <div className="col">
+                    <h1>Sequence</h1><hr></hr>
+ 
+                    <h3>{terms[this.state.curTerm]}, {years[this.state.curYear]}</h3>
+                    
+                    {this.state.curTerm===0 && <p>{courseString=fall1[this.state.curID].name+": "+fall1[this.state.curID].title}</p>}
+
+                   
+                    {this.state.curTerm===1 && <p>{courseString=fall2[this.state.curID].name+": "+fall2[this.state.curID].title}</p>}
+                   
+                    {this.state.curTerm===2 && <p>{courseString=spring1[this.state.curID].name+": "+spring1[this.state.curID].title}</p>}
+                    
+                    {this.state.curTerm===3 && <p>{courseString=spring2[this.state.curID].name+" "+spring2[this.state.curID].title}</p>}
+                   
+                    {this.state.curTerm===4 && <p>{courseString=summer1[this.state.curID].name+": "+summer1[this.state.curID].title}</p>}
+                    
+                    {this.state.curTerm===5 && <p>{courseString=summer2[this.state.curID].name+": "+summer2[this.state.curID].title}</p>} 
+
+                    <span onClick={() => this.changeTerm()} className="remove btn btn-primary">Next Term</span>
+
+                    <hr/>
+                    <h5>Units left until graduation: {unitsLeft}</h5>
+                    {seqs.map(seq => (<p>
+                        {seq.term},  {seq.year}: {seq.course}</p>))}
+                    </div>
+                    
+                    <div className="col">
+                    <h1>Course Listings</h1><hr></hr>
+                    <h3>{terms[this.state.curTerm]}</h3>
+
+                    <Wrapper>
+                    {/* <Title>Friends List</Title> */}
+                    {this.state.curTerm===0 && fall1Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===1 && fall2Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===2 && spring1Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                       
+                    />
+                    ))}
+                    {this.state.curTerm===3 && spring2Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===4 && summer1Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===5 && summer2Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                </Wrapper>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+}
+export default App;
+///////////////////////////////////////////////////
+
+import React, {Component} from "react";
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./components/Wrapper";
+// import Title from "./components/Title";
+// import React from "react";
+//import TermSequence from "./components/TermSequence";
+// import CourseListing from "./components/CourseListing";
+
+import fall1 from "./txt/fall1.json";
+import fall2 from "./txt/fall2.json";
+import spring1 from "./txt/spring1.json";
+import spring2 from "./txt/spring2.json";
+import summer1 from "./txt/summer1.json";
+import summer2 from "./txt/summer2.json";
+
+var fall1Courses=fall1;
+var fall2Courses=fall2;
+var spring1Courses=spring1;
+var spring2Courses=spring2;
+var summer1Courses=summer1;
+var summer2Courses=summer2;
+
+var fall1C=[];
+for(let i =0;i<fall1.length;i++)
+{
+    let txt=fall1[i].name+": "+fall1[i].title;
+    fall1C.push(txt);
+}
+console.log(fall1C)
+var fall2C=[];
+for(let i =0;i<fall2.length;i++)
+{
+    let txt=fall2[i].name+": "+fall2[i].title;
+    fall2C.push(txt);
+}
+
+var spring1C=[];
+for(let i =0;i<spring1.length;i++)
+{
+    let txt=spring1[i].name+": "+spring1[i].title;
+    spring1C.push(txt);
+}
+
+var spring2C=[];
+for(let i =0;i<spring2.length;i++)
+{
+    let txt=spring2[i].name+": "+spring2[i].title;
+    spring2C.push(txt);
+}
+var summer1C=[];
+for(let i =0;i<summer1.length;i++)
+{
+    let txt=summer1[i].name+": "+summer1[i].title;
+    summer1C.push(txt);
+}
+
+var summer2C=[];
+for(let i =0;i<summer2.length;i++)
+{
+    let txt=summer2[i].name+": "+summer2[i].title;
+    summer2C.push(txt);
+}
+
+
+
+var currentTerm=fall1Courses;
+var ct=0;
+var cc=0;
+var cci=0;
+var cy=0;
+var pt = 0; //projected grad term
+var py = 0; //projected grad year
+
+var years =[2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2038];
+var unitsLeft=14;
+
+var terms = ["Fall 1","Fall 2","Spring 1","Spring 2","Summer 1","Summer 2"];
+var seqs=[];
+var courseString="";
+function SequenceThis (term, year, course)
+{
+    this.term=term;
+    this.year=year;
+    this.course=course;
+}
+class App extends Component {
+    
+    // Setting the initial state of the Counter component
+    state = {
+      fall1,fall2,
+      spring1,spring2,
+      summer1,summer2,
+      curID:0,
+      currentCourse: 0,
+      curTerm: 0,
+      curYear:0
+    };
+    
+    projectGrad = () =>
+    {
+        //if(ct>=2)
+        for(var x=0;x<unitsLeft;x++)
+        {
+
+        }
+        py=years[cy+Math.ceil(unitsLeft/6)];
+        //pt=((ct+unitsLeft)-1)/6;
+        for(var i=0;i<(ct+unitsLeft)-1;i++)
+        {
+
+        }
+        //else py=(years[cy+Math.ceil(unitsLeft/6)])-1;
+    }
+    changeCourse = id => {
+        //console.log(id)
+        cc=id;
+        switch(ct)
+        {
+            case 0:
+            for(let i=0;i<fall1Courses.length;i++)
+                    {
+                        if(fall1Courses[i].id===cc)
+                           { 
+                               cci=i;
+                            }
+                    }
+            break;
+            case 1:
+            for(let i=0;i<fall2Courses.length;i++)
+                    {
+                        if(fall2Courses[i].id===cc)
+                           { 
+                               cci=i;
+                            }
+                    }
+            break;
+            
+            case 2:
+            for(let i=0;i<spring1Courses.length;i++)
+                    {
+                        if(spring1Courses[i].id===cc)
+                           { 
+                               cci=i;
+                            }
+                    }
+            break;
+            case 3:
+            for(let i=0;i<spring2Courses.length;i++)
+                    {
+                        if(spring2Courses[i].id===cc)
+                           { 
+                               cci=i;
+                            }
+                    }
+            break;
+            case 4:
+            for(let i=0;i<summer1Courses.length;i++)
+                    {
+                        if(summer1Courses[i].id===cc)
+                           { 
+                               cci=i;
+                            }
+                    }
+            break;
+            case 5:
+            for(let i=0;i<summer2Courses.length;i++)
+                    {
+                        if(summer2Courses[i].id===cc)
+                           { 
+                               cci=i;
+                            }
+                    }
+            break;
+            default:
+            //
+        }
+        console.log("CCI "+cci)
+
+        this.setState({curID: id})
+        //console.log(this.state.curID)
+        
+      };
+    changeTerm = () => {
+        if(unitsLeft===0)return;
+        var newSeq = new SequenceThis(terms[this.state.curTerm],years[this.state.curYear],courseString)
+        seqs.push(newSeq);
+        if(cc!==0)
+        {
+            unitsLeft--;
+            //console.log("term "+terms[ct])
+            switch (ct)
+            {
+                case 0:
+                    // for(var i=0;i<fall1Courses.length;i++)
+                    // {
+                    //     if(fall1Courses[i].id===cc)
+                    //        { 
+                    //            console.log(fall1Courses[i].id)
+                    //            fall1Courses.splice(i,1);
+                    //         }
+                    // }
+                    fall1Courses.splice(cci,1);
+                    //console.log(fall1Courses);
+                   // console.log(fall1Courses.indexOf(cc.name))
+
+                break;
+                case 1:
+                    fall2Courses.splice(cci,1);
+                    console.log(fall2Courses);
+
+                break;
+                case 2:
+                    spring1Courses.splice(cci,1);
+                    console.log(spring1Courses);
+
+                break;
+                case 3:
+                    spring2Courses.splice(cci,1);
+                    console.log(spring2Courses);
+
+                break;
+                case 4:
+                    summer1Courses.splice(cci,1);
+                    console.log(summer1Courses);
+
+                break;
+                case 5:
+                    summer2Courses.splice(cci,1);
+                    console.log(summer2Courses);
+
+                break;
+                default:
+                //
+            }
+        }
+
+        this.setState({currentCourse: 0});
+        this.setState({curID: 0});
+        cc=0;
+        if(this.state.curTerm<terms.length-1)
+           { 
+               this.setState({ curTerm: this.state.curTerm + 1 });
+               ct++;
+               
+            }
+        else {
+            this.setState({ curTerm: 0})
+            ct=0;
+        }
+        // ct=this.state.curTerm;
+        if(ct===2)
+           { 
+               this.setState({ curYear: this.state.curYear + 1 });
+               cy++;
+            }
+
+         this.projectGrad();
+      };
+    render(){
+        return (
+            
+            <div className="container jumbotron ">
+            
+                <div className="row">
+                    <div className="col">
+                    <h1>Sequence</h1><hr></hr>
+ 
+                    <h3>{terms[this.state.curTerm]}, {years[this.state.curYear]}</h3>
+                    
+                    {this.state.curTerm===0 && <p>{courseString=fall1[cci].name+": "+fall1[cci].title}</p>}
+
+                   
+                    {this.state.curTerm===1 && <p>{courseString=fall2[cci].name+": "+fall2[cci].title}</p>}
+                   
+                    {this.state.curTerm===2 && <p>{courseString=spring1[cci].name+": "+spring1[cci].title}</p>}
+                    
+                    {this.state.curTerm===3 && <p>{courseString=spring2[cci].name+" "+spring2[cci].title}</p>}
+                   
+                    {this.state.curTerm===4 && <p>{courseString=summer1[cci].name+": "+summer1[cci].title}</p>}
+                    
+                    {this.state.curTerm===5 && <p>{courseString=summer2[cci].name+": "+summer2[cci].title}</p>} 
+
+                    <span onClick={() => this.changeTerm()} className="remove btn btn-primary">Next Term</span>
+
+                    <hr/>
+                    <h5>Units left until graduation: {unitsLeft}</h5>
+                    <h5>Estimated graduation: {py}, {pt}</h5>
+                    {seqs.map(seq => (<p key={seqs.indexOf(seq)}> 
+                        {seq.term},  {seq.year}: {seq.course}</p>))}
+                    </div>
+                    
+                    <div className="col">
+                    <h1>Course Listings</h1><hr></hr>
+                    <h3>{terms[this.state.curTerm]}</h3>
+
+                    <Wrapper>
+                    {/* <Title>Friends List</Title> */}
+                    {this.state.curTerm===0 && fall1C.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={fall1C.indexOf(course)}
+                        key={fall1C.indexOf(course)}
+                        name={course}
+                        // title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===1 && fall2Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===2 && spring1Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                       
+                    />
+                    ))}
+                    {this.state.curTerm===3 && spring2Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===4 && summer1Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                    {this.state.curTerm===5 && summer2Courses.map(course => (
+                    <FriendCard
+                        changeCourse={this.changeCourse}
+                        id={course.id}
+                        key={course.id}
+                        name={course.name}
+                        title={course.title}
+                        
+                    />
+                    ))}
+                </Wrapper>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+}
+
+
+export default App;

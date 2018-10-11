@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "Opt Out",
+    "title": "Take no course for Spring 1"
+  },
+  {
+    "id": 1,
+    "name": "PHW200F",
+    "title": "Introduction to Environmental Health Sciences"
+  },
+  {
+    "id": 2,
+    "name": "PHW218",
+    "title": "Evaluation of Health and Social Programs"
+  },
+  {
+    "id": 3,
+    "name": "PHW226C",
+    "title": "Economics of Population Health"
+  },
+  {
+    "id": 4,
+    "name": "PHW212",
+    "title": "Foundations of Global Health"
+  },
+  {
+    "id": 5,
+    "name": "PHW272A",
+    "title": "Intro to GIS for Public Health (new course)"
+  }
+]
