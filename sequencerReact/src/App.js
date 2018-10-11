@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import FriendCard from "./components/FriendCard";
+import CourseListings from "./components/CourseListings";
 import Wrapper from "./components/Wrapper";
 
 import fall1 from "./txt/fall1.json";
@@ -10,53 +10,16 @@ import summer1 from "./txt/summer1.json";
 import summer2 from "./txt/summer2.json";
 
 var fall1C=[];
-for(let i =0;i<fall1.length;i++)
-{
-    let txt=fall1[i].name+": "+fall1[i].title;
-    fall1C.push(txt);
-}
-//console.log(fall1C)
 var fall2C=[];
-for(let i =0;i<fall2.length;i++)
-{
-    let txt=fall2[i].name+": "+fall2[i].title;
-    fall2C.push(txt);
-}
-
 var spring1C=[];
-for(let i =0;i<spring1.length;i++)
-{
-    let txt=spring1[i].name+": "+spring1[i].title;
-    spring1C.push(txt);
-}
-
 var spring2C=[];
-for(let i =0;i<spring2.length;i++)
-{
-    let txt=spring2[i].name+": "+spring2[i].title;
-    spring2C.push(txt);
-}
 var summer1C=[];
-for(let i =0;i<summer1.length;i++)
-{
-    let txt=summer1[i].name+": "+summer1[i].title;
-    summer1C.push(txt);
-}
-
 var summer2C=[];
-for(let i =0;i<summer2.length;i++)
-{
-    let txt=summer2[i].name+": "+summer2[i].title;
-    summer2C.push(txt);
-}
-
-
 
 var ct=0;
 var cc=0;
 var cci=0;
 var cy=0;
-
 
 var years =[2019,2020,2021,2022,2023,2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2038];
 var unitsLeft=14;
@@ -67,13 +30,48 @@ var courseString="";
 var finalTerm =0;
 var finalYear=0;
 
+StartMeUp();
+function StartMeUp()
+{
+    for(let i =0;i<fall1.length;i++)
+    {
+        let txt=fall1[i].name+": "+fall1[i].title;
+        fall1C.push(txt);
+    }
+    for(let i =0;i<fall2.length;i++)
+    {
+        let txt=fall2[i].name+": "+fall2[i].title;
+        fall2C.push(txt);
+    }
+    for(let i =0;i<spring1.length;i++)
+    {
+        let txt=spring1[i].name+": "+spring1[i].title;
+        spring1C.push(txt);
+    }
+    for(let i =0;i<spring2.length;i++)
+    {
+        let txt=spring2[i].name+": "+spring2[i].title;
+        spring2C.push(txt);
+    }
+    for(let i =0;i<summer1.length;i++)
+    {
+        let txt=summer1[i].name+": "+summer1[i].title;
+        summer1C.push(txt);
+    }
+    for(let i =0;i<summer2.length;i++)
+    {
+        let txt=summer2[i].name+": "+summer2[i].title;
+        summer2C.push(txt);
+    }
+    FinalTerm();
+}
 function SequenceThis (term, year, course)
 {
     this.term=term;
     this.year=year;
     this.course=course;
 }
-FinalTerm();
+
 function FinalTerm()
 {
  for (let i =0; i<unitsLeft-1;i++)
@@ -121,7 +119,6 @@ class App extends Component {
             {
                 case 0:
                     fall1C.splice(cci,1);
-                    //console.log(fall1C);
 
                 break;
                 case 1:
@@ -186,19 +183,19 @@ class App extends Component {
                     <div className="col">
                     <h1>Sequence</h1><hr></hr>
  
-                    <h3>{terms[this.state.curTerm]}, {years[this.state.curYear]}</h3>
+                    {unitsLeft>0 ?(<h3>{terms[this.state.curTerm]}, {years[this.state.curYear]}</h3>):<h3>Finished</h3>}
                     
-                    {this.state.curTerm===0 && <p>{courseString=fall1[cci].name+": "+fall1[cci].title}</p>}
+                    {unitsLeft>0 ?(this.state.curTerm===0 && <p>{courseString=fall1[cci].name+": "+fall1[cci].title}</p>):("")}
                    
-                    {this.state.curTerm===1 && <p>{courseString=fall2[cci].name+": "+fall2[cci].title}</p>}
+                    {unitsLeft>0 ?(this.state.curTerm===1 && <p>{courseString=fall2[cci].name+": "+fall2[cci].title}</p>):("")}
                    
-                    {this.state.curTerm===2 && <p>{courseString=spring1[cci].name+": "+spring1[cci].title}</p>}
+                    {unitsLeft>0 ?(this.state.curTerm===2 && <p>{courseString=spring1[cci].name+": "+spring1[cci].title}</p>):("")}
                     
-                    {this.state.curTerm===3 && <p>{courseString=spring2[cci].name+" "+spring2[cci].title}</p>}
+                    {unitsLeft>0 ?(this.state.curTerm===3 && <p>{courseString=spring2[cci].name+" "+spring2[cci].title}</p>):("")}
                    
-                    {this.state.curTerm===4 && <p>{courseString=summer1[cci].name+": "+summer1[cci].title}</p>}
+                    {unitsLeft>0 ?(this.state.curTerm===4 && <p>{courseString=summer1[cci].name+": "+summer1[cci].title}</p>):("")}
                     
-                    {this.state.curTerm===5 && <p>{courseString=summer2[cci].name+": "+summer2[cci].title}</p>} 
+                    {unitsLeft>0 ?(this.state.curTerm===5 && <p>{courseString=summer2[cci].name+": "+summer2[cci].title}</p>):("")} 
 
                     <span onClick={() => this.changeTerm()} className="remove btn btn-primary">Add to sequence</span>
 
@@ -214,64 +211,57 @@ class App extends Component {
                     <h3>{terms[this.state.curTerm]}</h3>
 
                     <Wrapper>
-                    {/* <Title>Friends List</Title> */}
                     {this.state.curTerm===0 && fall1C.map(course => (
-                    <FriendCard
+                    <CourseListings
                         changeCourse={this.changeCourse}
                         id={fall1C.indexOf(course)}
                         key={fall1C.indexOf(course)}
                         name={course}
-                        // title={course.title}
                         
                     />
                     ))}
                     {this.state.curTerm===1 && fall2C.map(course => (
-                    <FriendCard
+                    <CourseListings
                         changeCourse={this.changeCourse}
                         id={fall2C.indexOf(course)}
                         key={fall2C.indexOf(course)}
                         name={course}
-                        // title={course.title}
                         
                     />
                     ))}
                     {this.state.curTerm===2 && spring1C.map(course => (
-                    <FriendCard
+                    <CourseListings
                         changeCourse={this.changeCourse}
                         id={spring1C.indexOf(course)}
                         key={spring1C.indexOf(course)}
                         name={course}
-                        // title={course.title}
                        
                     />
                     ))}
                     {this.state.curTerm===3 && spring2C.map(course => (
-                    <FriendCard
+                    <CourseListings
                         changeCourse={this.changeCourse}
                         id={spring2C.indexOf(course)}
                         key={spring2C.indexOf(course)}
                         name={course}
-                        // title={course.title}
                         
                     />
                     ))}
                     {this.state.curTerm===4 && summer1C.map(course => (
-                    <FriendCard
+                    <CourseListings
                         changeCourse={this.changeCourse}
                         id={summer1C.indexOf(course)}
                         key={summer1C.indexOf(course)}
                         name={course}
-                        // title={course.title}
                         
                     />
                     ))}
                     {this.state.curTerm===5 && summer2C.map(course => (
-                    <FriendCard
+                    <CourseListings
                         changeCourse={this.changeCourse}
                         id={summer2C.indexOf(course)}
                         key={summer2C.indexOf(course)}
                         name={course}
-                        // title={course.title}
                         
                     />
                     ))}
