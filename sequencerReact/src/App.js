@@ -171,6 +171,11 @@ class App extends Component {
            { 
                this.setState({ curYear: this.state.curYear + 1 });
                cy++;
+               if(cy>years.length)
+               {
+                   years.push(years[cy]++)
+                   this.setState({ curYear: this.state.curYear + 1 });
+               }
             }
 
       };
