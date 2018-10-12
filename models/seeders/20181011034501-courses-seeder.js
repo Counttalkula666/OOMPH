@@ -11,7 +11,7 @@ module.exports = {
         allowNull: false,
         createdAt: new Date(),
         updatedAT: new Date()
-      },{  
+      },
       courseEnrollNum: { type: DataTypes.INTEGER,
         allowNull: false,
         createdAt: new Date(),
