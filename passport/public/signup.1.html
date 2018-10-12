@@ -4,9 +4,8 @@
 <head>
   <title>Passport Authentication</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  
   
   <meta name="generator" content="king-theme" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -75,7 +74,7 @@
     <link rel='shortlink' href='https://onlinemph.berkeley.edu/' />
     <link rel="alternate" type="application/json+oembed" href="https://onlinemph.berkeley.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fonlinemph.berkeley.edu%2F" />
     <link rel="alternate" type="text/xml+oembed" href="https://onlinemph.berkeley.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fonlinemph.berkeley.edu%2F&#038;format=xml" />
-    <script type="text/javascript">var kc_script_data={ajax_url:"https://onlinemph.berkeley.edu/wp-admin/admin-ajax.php"}</script>
+    <script type="text/javascript">var kc_script_data={ajax_url:"https://onlinemph.berkeley.edu/wp-admin/admin-ajax.php"};</script>
 
     <script>
     var ms_grabbing_curosr='https://onlinemph.berkeley.edu/wp-content/plugins/masterslider/public/assets/css/common/grabbing.cur',ms_grab_curosr='https://onlinemph.berkeley.edu/wp-content/plugins/masterslider/public/assets/css/common/grab.cur';</script>
@@ -98,9 +97,6 @@
   
   
   <link href="./stylesheets/style.css" rel="stylesheet">
-  
-  
-  
 </head>
 
 <body class="home page-template-default page page-id-5 page-parent bg-cover kingcomposer kc-css-system _masterslider _msp_version_2.29.0">
@@ -174,21 +170,28 @@
     </li>
     <li id="menu-item-1332" class="buynowbuto menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-1332 yam-fwr"><a target="_blank" href="http://grad.berkeley.edu/admissions/apply/">Apply Now</a></li>
     <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="https://onlinemph.berkeley.edu/request-info/">Request Info</a></li>
+    <!-- <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="./signup.html">Sign up</a></li> -->
+   
+    <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="./login.html">Log in</a></li>
     
 
     </ul></div></nav> </div></div></div>
         <!-- end Navigation Menu -->
         </div>
-    </header>  
+    </header>
 
-
-
- 
+  
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
         
-        <form class="login">
+        <form class="signup">
           <div class="form-group">
+            <label for="exampleInputFN">First Name</label>
+            <input type="text" class="form-control" id="FN-input" placeholder="First Name">
+          </div><div class="form-group">
+            <label for="exampleInputLN">Last Name</label>
+            <input type="text" class="form-control" id="LN-input" placeholder="Last Name">
+          </div><div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
@@ -196,16 +199,20 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
         <br />
-        <p>Or sign up <a href="/signup.html">here</a></p>
+        <p>Or log in <a href="/login.html">here</a></p>
       </div>
     </div>
-  
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/login.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
 
 </body>
 
