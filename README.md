@@ -16,11 +16,10 @@ Screenshots:
 
 ![Opening Page Image](./Screenshots, etc./Screenshot1.png)
 
-Technologies Used:
+Technologies, Frameworks, Languages and Libraries used in the construction of this site:
 
-Frameworks and languages used in the construction of this site:
+React, MySQL, Sequelize ORM, Passport Authentication, Node and Express Web Servers, Heroku
 
-We have also utilized the following libraries:
 
 Credits:
 
@@ -30,7 +29,7 @@ Credits:
 2. Darios Teklemariam: Front End Implementation and Deployment (Wordpress, HTML & CSS), Routing.
     https://github.com/dariosyo<br>
 
-3. Elena Belgum: Sequelize Course Models, Node Packages/Dependencies, Routing, File Structure, Readme.
+3. Elena Belgum: MySQL Database, Sequelize Course Models, Node Packages/Dependencies, Routing, File Structure, Readme.
     https://github.com/Counttalkula666<br>
 
 4. Special thanks to: David Hallinan, The TA team & Julie Radley Little
