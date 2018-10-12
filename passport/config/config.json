@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "daridari",
+    "password": "fishsticks",
     "database": "oomph_demo",
     "host": "127.0.0.1",
     "dialect": "mysql"

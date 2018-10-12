@@ -96,23 +96,9 @@ class App extends Component {
       curID:0,
       currentCourse: 0,
       curTerm: 0,
-      curYear:0,
-      response: ""
+      curYear:0
     };
-    componentDidMount ()
-    {
-        this.callApi()
-        .then(res=>this.setState({response: res.express}))
-        .catch(err=>console.log(err));
-    }
-    callApi = async () =>
-    {
-        const response =await fetch('/api/login');
-        const body = await response.json();
-
-        if(response.status!==200) throw Error (body.message);
-        return body;
-    }
+        
     changeCourse = id => {
         //console.log(id)
         cc=id;
@@ -201,7 +187,6 @@ class App extends Component {
                 <div className="row">
                     <div className="col-sm-6">
                     <h1>Sequence</h1><hr></hr>
-                    
  
                     {unitsLeft>0 ?(<h3>{terms[this.state.curTerm]}, {years[this.state.curYear]}</h3>):<h3>Finished</h3>}
                     
@@ -216,17 +201,16 @@ class App extends Component {
                     {unitsLeft>0 ?(this.state.curTerm===4 && <p>{courseString=summer1[cci].name+": "+summer1[cci].title}</p>):("")}
                     
                     {unitsLeft>0 ?(this.state.curTerm===5 && <p>{courseString=summer2[cci].name+": "+summer2[cci].title}</p>):("")} 
-                    <div className="row">
-                        <div className="col-sm-12">
+                    
                     <span onClick={() => this.changeTerm()} className="remove btn btn-primary">Add to sequence</span>
 
-                    <hr/><hr></hr>
+                    <hr/>
                     <h5>Units left until graduation: {unitsLeft}</h5>
                     <h5>Estimated final term: {terms[finalTerm]}, {finalYear}</h5>
                     {seqs.map(seq => (<p key={seqs.indexOf(seq)}> 
                         {seq.term},  {seq.year}: {seq.course}</p>))}
                     </div>
-                    </div></div>
+                    
                     <div className="col-sm-6">
                     <h1>Course Listings</h1><hr></hr>
                     <h3>{terms[this.state.curTerm]}</h3>
