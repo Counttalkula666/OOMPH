@@ -7,7 +7,7 @@ const CourseListings = props => (
     <div className="content">
       <ul>
         <li>
-          <strong>Course:</strong> {props.name}
+          <strong>Course:</strong> <p>{props.name}</p>
         </li>
         {/* <li>
           <strong>Title:</strong> {props.title}

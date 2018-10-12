@@ -1,0 +1,131 @@
+form.signup,
+form.login {
+  margin-top: 20px;
+}
+
+
+
+
+.kc-off-notice{
+  display: inline-block !important;
+}			
+.latest_posts_B3RPXBplJR .box02{ 
+  background-color:#fdb515;			
+}			
+.latest_posts_B3RPXBplJR a{				
+  color:#fdb515;			
+}			
+.latest_posts_B3RPXBplJR .box01:hover , .latest_posts_B3RPXBplJR .box03:hover, .latest_posts_B3RPXBplJR .box05:hover{		-webkit-box-shadow:0px 0px 0px 10px #fdb515;				
+  -moz-box-shadow:0px 0px 0px 10px #fdb515;				
+  box-shadow:0px 0px 0px 10px #fdb515;			
+}			
+.latest_posts_B3RPXBplJR .box02:hover{				
+  -webkit-box-shadow:0px 0px 0px 10px rgba(39,39,39,1);				
+  -moz-box-shadow:0px 0px 0px 10px rgba(39,39,39,1);				
+  box-shadow:0px 0px 0px 10px rgba(39,39,39,1);			
+}			
+.latest_posts_B3RPXBplJR .box04:hover{				
+  -webkit-box-shadow:0px 0px 0px 10px rgba(39,39,39,1);				
+  -moz-box-shadow:0px 0px 0px 10px rgba(39,39,39,1);				
+  box-shadow:0px 0px 0px 10px rgba(39,39,39,1);			
+}			
+.kc-container{max-width:1170px;} 
+      
+@media only screen and (min-width:1000px) and (max-width:5000px){
+  body.kc-css-system .kc-css-666833{
+       width:50%;
+  }
+  body.kc-css-system .kc-css-440334{width:50%;}
+  }
+  body.kc-css-system .kc-css-7808{
+      background:#3b7ea1;margin-bottom:0px;
+  }
+  body.kc-css-system .kc-css-27443{
+      margin-bottom:0px;
+  }
+  body.kc-css-system .kc-css-404134{
+      background:#3b7ea1;
+  }
+  body.kc-css-system .kc-css-793987.kc_title,body.kc-css-system .kc-css-793987 .kc_title,body.kc-css-system .kc-css-793987 .kc_title a.kc_title_link{
+      color:#ffffff;font-weight:400;text-align:center;
+  }
+  body.kc-css-system .kc-css-649410{
+      background:#eeeeee;
+  }
+  body.kc-css-system .kc-css-78374{
+      font-size:14px;background:#eeeeee;
+  }
+  body.kc-css-system .kc-css-342115 ,body.kc-css-system .kc-css-342115 p{
+      color:#000000;font-size:16px;line-height:25px;
+  }
+  body.kc-css-system .kc-css-963324 ,body.kc-css-system .kc-css-963324 p{
+      color:#000000;font-size:16px;line-height:25px;
+  }
+  body.kc-css-system .kc-css-69688 ,body.kc-css-system .kc-css-69688 p{
+      color:#000000;font-size:16px;line-height:25px;
+  }
+  body.kc-css-system .kc-css-824972{background:#ffffff;
+  }
+  body.kc-css-system .kc-css-774169.kc_title,body.kc-css-system .kc-css-774169 .kc_title,body.kc-css-system .kc-css-774169 .kc_title a.kc_title_link{
+      color:#000000;text-align:center;
+  }   
+  body.kc-css-system .kc-css-768960{
+      color:#000000;display:none;
+  }
+  body.kc-css-system .kc-css-689271{background:transparent url(https://onlinemph.berkeley.edu/wp-admin/admin-ajax.php?action=kc_get_thumbn&type=filter_url&id=%2Fwp-content%2Fuploads%2F2018%2F02%2FFotolia_175214654_Subscription_Monthly_M.jpg) center center/cover no-repeat fixed;
+}
+@media only screen and (max-width:1024px){
+  body.kc-css-system .kc-css-7808{
+      display:none;
+  }
+  body.kc-css-system .kc-css-824972{
+      display:none;
+  }
+  body.kc-css-system .kc-css-774169{
+      display:none;
+  }
+  body.kc-css-system .kc-css-768960{
+      display:block;
+  }}
+@media only screen and (max-width:999px){body.kc-css-system .kc-css-7808{
+  display:none;
+  }
+  body.kc-css-system .kc-css-824972{
+      display:none;
+  }   
+  body.kc-css-system .kc-css-774169{
+      display:none;
+  }
+  body.kc-css-system .kc-css-768960{
+      display:block;
+  }
+}
+@media only screen and (max-width:767px){
+  body.kc-css-system .kc-css-7808{
+      font-size:24px;background:#1e73be;
+  }
+  body.kc-css-system .kc-css-824972{
+      display:none;
+  }
+  body.kc-css-system .kc-css-774169{
+      display:none;
+  }
+  body.kc-css-system .kc-css-768960{
+      display:block;
+  }
+}
+@media only screen and (max-width:479px){
+  body.kc-css-system .kc-css-7808{
+      font-size:24px;background:#1e73be;display:none;
+  }
+  body.kc-css-system .kc-css-824972{
+      display:none;
+  }
+  body.kc-css-system .kc-css-774169{
+      display:none;
+  }
+  body.kc-css-system .kc-css-768960{
+      display:block;
+  }
+}
+  
