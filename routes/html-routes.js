@@ -36,3 +36,9 @@ module.exports = function(app) {
   });
 
 };
+
+// for reference: local filepaths for html outside "src" folder:
+// C:\Users\elena\Desktop\Bootcamp\Homework For Github\OOMPH\student_portal.html
+// C:\Users\elena\Desktop\Bootcamp\Homework For Github\OOMPH\index.html
+// C:\Users\elena\Desktop\Bootcamp\Homework For Github\OOMPH\client\public\index.html
+// C:\Users\elena\Desktop\Bootcamp\Homework For Github\OOMPH\sequencerReact\public\index.html
