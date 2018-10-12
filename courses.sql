@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS oomph_database;
-CREATE DATABASE oomph_database;
-USE oomph_database;
+DROP DATABASE IF EXISTS oomph;
+CREATE DATABASE oomph;
+USE oomph;
 
 CREATE TABLE courses(
 id INT AUTO_INCREMENT NOT NULL,
