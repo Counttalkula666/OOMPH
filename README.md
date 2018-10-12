@@ -18,8 +18,8 @@ Screenshots:
 
 Technologies, Frameworks, Languages and Libraries used in the construction of this site:
 
-React, MySQL, Sequelize ORM, Passport Authentication, Node and Express Web Servers, Heroku
-
+React, MySQL, Sequelize ORM, Passport Authentication, Node and Express Web Servers, Javascript, HTML, CSS,
+Heroku,
 
 Credits:
 
@@ -32,7 +32,11 @@ Credits:
     https://github.com/dariosyo<br>
 
 3. Elena Belgum: MySQL DB, Sequelize Course Models, NPM Packages/Dependencies, Routing, File Structure, Readme.
+    https://www.linkedin.com/in/ElenaBelgum
     https://github.com/Counttalkula666/Responsive-portfolio
     https://github.com/Counttalkula666<br>
 
-4. Special Thanks: David Hallinan, The TA team & Julie Radley Little
+4. Special Thanks: 
+    David Hallinan - https://www.linkedin.com/in/dhallinan/
+    Julie Radley Little
+    The TA team
