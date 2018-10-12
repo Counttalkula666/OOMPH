@@ -6,7 +6,8 @@ module.exports = {
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
  */
-      return queryInterface.bulkInsert('Courses', [{
+      return queryInterface.bulkInsert('Courses'), [{
+        //do I need to make the following a table somehow so that each course has every field?
       courseNum: { type: DataTypes.STRING,
         allowNull: false,
         createdAt: new Date(),
@@ -47,23 +48,9 @@ module.exports = {
       intReq: { type: DataTypes.STRING,
         createdAt: new Date(),
         updatedAT: new Date()
-      },         
-      courseNum: { type: DataTypes.TEXT,
-        allowNull: false,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },        
-      }]);
-   
-  },
+      }   
+      }]}};
 
   down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('Person', null, {});
-    */
-  }
-};
+ 
+  };
