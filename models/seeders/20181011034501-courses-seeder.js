@@ -1,3 +1,5 @@
+//NEED FILE REVIEW TO CONFIRM PLACEMENT OF DATA/CODE & ADVISE ON NEXT STEP
+
 'use strict';
 
 module.exports = {
@@ -7,7 +9,8 @@ module.exports = {
       Return a promise to correctly handle asynchronicity.
  */
       return queryInterface.bulkInsert('Courses'), [{
-        //do I need to make the following a table so that each course has every field?
+        //do I need to make the following a table so that each course has every field (how)?
+        //are these set up properly or do they need to be individual courses instead of fields?
       courseNum: { type: DataTypes.STRING,
         allowNull: false,
         createdAt: new Date(),
