@@ -27,7 +27,7 @@ Credits:
 1. Drew Radley Little: React Sequencer, Student Database, Routing, Passport Authentication. 
     https://github.com/drewradley<br>
     
-2. Darios: Front End Implementation and Deployment (Wordpress, HTML & CSS), Routing.
+2. Darios Teklemariam: Front End Implementation and Deployment (Wordpress, HTML & CSS), Routing.
     https://github.com/dariosyo<br>
 
 3. Elena Belgum: Sequelize Course Models, Node Packages/Dependencies, Routing, File Structure, Readme.
