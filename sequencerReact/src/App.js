@@ -96,9 +96,23 @@ class App extends Component {
       curID:0,
       currentCourse: 0,
       curTerm: 0,
-      curYear:0
+      curYear:0,
+      response: ""
     };
-        
+    componentDidMount ()
+    {
+        this.callApi()
+        .then(res=>this.setState({response: res.express}))
+        .catch(err=>console.log(err));
+    }
+    callApi = async () =>
+    {
+        const response =await fetch('/api/login');
+        const body = await response.json();
+
+        if(response.status!==200) throw Error (body.message);
+        return body;
+    }
     changeCourse = id => {
         //console.log(id)
         cc=id;
