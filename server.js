@@ -1,8 +1,6 @@
 //Elena to group:
 //Initial server code copy/pasted from project resources create react/express app in week 10 
 //Please refer to week 10 folder structure and readme for more info/config structure. 
-//The client folder was copy pasted directly from week 10 without the dual package JSON files
-//Additional package JSON and associated readme are located temporarily in the resources, etc. folder
 //The parent create-react app folder was also not copied - Ask David about config
 
 

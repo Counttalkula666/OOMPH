@@ -24,12 +24,15 @@ React, MySQL, Sequelize ORM, Passport Authentication, Node and Express Web Serve
 Credits:
 
 1. Drew Radley Little: React Sequencer, Student Database, Routing, Passport Authentication. 
+    https://github.com/drewradley/Responsive-Portfolio
     https://github.com/drewradley<br>
     
 2. Darios Teklemariam: Front End Implementation and Deployment (Wordpress, HTML & CSS), Routing.
+    https://github.com/dariosyo/Responsive-Portfolio
     https://github.com/dariosyo<br>
 
-3. Elena Belgum: MySQL Database, Sequelize Course Models, Node Packages/Dependencies, Routing, File Structure, Readme.
+3. Elena Belgum: MySQL DB, Sequelize Course Models, NPM Packages/Dependencies, Routing, File Structure, Readme.
+    https://github.com/Counttalkula666/Responsive-portfolio
     https://github.com/Counttalkula666<br>
 
-4. Special thanks to: David Hallinan, The TA team & Julie Radley Little
+4. Special Thanks: David Hallinan, The TA team & Julie Radley Little
