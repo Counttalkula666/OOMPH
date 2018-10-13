@@ -1,4 +1,4 @@
-//NEED FILE REVIEW TO CONFIRM PLACEMENT OF DATA/CODE & ADVISE ON NEXT STEP - SEE SEEDERS ALSO
+//NEED FILE REVIEW TO CONFIRM PLACEMENT OF DATA/CODE & ADVICE ON NEXT STEP - SEE SEEDERS ALSO
 
 module.exports = function(sequelize, DataTypes) {
     var Courses = sequelize.define("Courses", {
