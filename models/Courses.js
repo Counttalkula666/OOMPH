@@ -17,8 +17,7 @@ module.exports = function(sequelize, DataTypes) {
         unique: true,
         allowNull: false
       },
-       "courseEnrollNum: {
-       "courseEnrollNum: {
+      courseEnrollNum: {
         type: DataTypes.INTEGER,
         unique: true,
         allowNull: false

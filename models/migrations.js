@@ -1,8 +1,8 @@
- 
+
 'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) {
+  up: (queryInterface, Sequelize);
       return queryInterface.createTable('Courses'), [{
       id: {type: DataTypes.INTEGER,
          allowNull: false,

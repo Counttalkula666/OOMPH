@@ -15,8 +15,8 @@ module.exports = {
          autoIncrement: true,
          primaryKey: true,
          type: Sequelize.INTEGER
-         created_at: new Date(),
-         updated_at: new Date()
+         createdAt: new Date(),
+         updatedAt: new Date()
         },
       courseNum: { type: DataTypes.STRING,
         allowNull: false,
