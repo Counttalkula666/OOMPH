@@ -3,14 +3,21 @@
 'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
- */
+  up: (queryInterface, Sequelize) {
+
+      //Add altering commands here.
+      //Return a promise to correctly handle asynchronicity.
       return queryInterface.bulkInsert('Courses'), [{
         //do I need to make the following a table so that each course has every field (how)?
         //are these set up properly or do they need to be individual courses instead of fields?
+      id: {
+         allowNull: false,
+         autoIncrement: true,
+         primaryKey: true,
+         type: Sequelize.INTEGER
+         created_at: new Date(),
+         updated_at: new Date()
+        },
       courseNum: { type: DataTypes.STRING,
         allowNull: false,
         createdAt: new Date(),

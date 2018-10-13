@@ -9,6 +9,7 @@
   "author": "Elena",
   "license": "ISC",
   "dependencies": {
+    "2": "^2.0.0",
     "mysql": "^2.16.0",
     "sequelize": "^4.39.0"
   }

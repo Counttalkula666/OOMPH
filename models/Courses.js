@@ -1,18 +1,31 @@
 //NEED FILE REVIEW TO CONFIRM PLACEMENT OF DATA/CODE & ADVICE ON NEXT STEP - SEE SEEDERS ALSO
 
+    
+    
+
+"use strict';
 module.exports = function(sequelize, DataTypes) {
     var Courses = sequelize.define("Courses", {
+      id: {
+        allowNull: false,
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4
+      },
       courseNum: {
         type: DataTypes.STRING,
-        allowNull: false,
+        unique: true,
+        allowNull: false
       },
-      courseEnrollNum: {
+       "courseEnrollNum: {
+       "courseEnrollNum: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        unique: true,
+        allowNull: false
       },
       courseName: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        allowNull: false
       },
       courseDesc: {
         type: DataTypes.STRING,
