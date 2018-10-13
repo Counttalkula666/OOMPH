@@ -1,9 +1,5 @@
-//NEED FILE REVIEW TO CONFIRM PLACEMENT OF DATA/CODE & ADVICE ON NEXT STEP - SEE SEEDERS ALSO
-
-    
-    
-
 "use strict';
+
 module.exports = function(sequelize, DataTypes) {
     var Courses = sequelize.define("Courses", {
       id: {

@@ -10,11 +10,10 @@ module.exports = {
       return queryInterface.bulkInsert('Courses'), [{
         //do I need to make the following a table so that each course has every field (how)?
         //are these set up properly or do they need to be individual courses instead of fields?
-      id: {
+      id: {type: Sequelize.INTEGER
          allowNull: false,
          autoIncrement: true,
          primaryKey: true,
-         type: Sequelize.INTEGER
          createdAt: new Date(),
          updatedAt: new Date()
         },
