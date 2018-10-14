@@ -3,78 +3,421 @@
 'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) {
-
-      //Add altering commands here.
-      //Return a promise to correctly handle asynchronicity.
+  up: (queryInterface, Sequelize) ==> {
       return queryInterface.bulkInsert('Courses'), [{
-        //do I need to make the following a table so that each course has every field (how)?
-        //are these set up properly or do they need to be individual courses instead of fields?
-      id: {type: Sequelize.INTEGER
-         allowNull: false,
-         autoIncrement: true,
-         primaryKey: true,
-         createdAt: new Date(),
-         updatedAt: new Date()
-        },
-      courseNum: { type: DataTypes.STRING,
-        allowNull: false,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },
-      courseEnrollNum: { type: DataTypes.INTEGER,
-        allowNull: false,
-        createdAt: new Date(),
-        pdatedAT: new Date()
-      },
-      courseName: { type: DataTypes.STRING,
-        allowNull: false,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },
-      courseDesc: { type: DataTypes.TEXT,
-        allowNull: false,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },
-      termOffered: { type: DataTypes.STRING,
-        allowNull: false,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },
-      midProcExam: { type: DataTypes.STRING,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },         
-      finProcExam: { type: DataTypes.STRING,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },         
-      hpmReq:  { type: DataTypes.STRING,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      },         
-      intReq: { type: DataTypes.STRING,
-        createdAt: new Date(),
-        updatedAT: new Date()
-      }   
-      }]}};
+        module.exports = {
+          up: (queryInterface, Sequelize) {
+              return queryInterface.bulkInsert('Courses'), [{
+                 
+              courseNum: "PHW200E", 
+              courseEnrollNum: 14857, 
+              ourseName:  "Health Policy and Management", 
+              courseDesc: "You will learn about health policy and management and health care delivery systems, primarily from a United States perspective. Discover how health policy and management applies concepts from economics, organizational behavior, and political science to the structure, financing, and regulation of public health and the health care delivery systems.", 
+              termOffered: "Summer-1 2018",
+              midProcExam: "May 28th-June 4th",
+              finProcExam: NULL, 
+              hpmReq:"Required 1st year course", 
+              intReq:"Required 1st year course",    
+              },{                      
 
+              courseNum:"PHW289",
+              courseEnrollNum: 14863, 
+              courseName:"Interdisciplinary Seminar",
+              courseDesc: "This multidisciplinary course draws from current topics and emerging competencies in public health professions to guide you in the tools and practices that lead to better solutions. The topics are delivered by discipline experts with whom you will engage in hands on workshops, lectures, and gatherings during a week long campus visit.",
+              midProcExam: "Summer-1 2018",
+              termOffered: NULL,
+              finProcExam: NULL,  
+              hpmReq: "Required 2nd Year Course", 
+              intReq: "Required 2nd Year Course"                     
+                  
+              },{
+              },{                      
+     
+              courseNum: "PHW289",
+              courseEnrollNum: 14863,
+              ourseName: "Interdisciplinary Seminar",
+              courseDesc: "This multidisciplinary course draws from current topics and emerging competencies in public health professions to guide you in the tools and practices that lead to better solutions. The topics are delivered by discipline experts with whom you will engage in hands on workshops, lectures, and gatherings during a week long campus visit.", 
+              termOffered: "Summer-1 2018",
+              midProcExam:  NULL, 
+              finProcExam: NULL,
+              hpmReq: "Required 2nd Year Course", 
+              intReq: "Required 2nd Year Course"                   
+                    
+              },{
+              },{                      
+               
+              courseNum:  "PHW257",
+              courseEnrollNum: 16223,
+              ourseName: "Emergency Preparedness and Disaster Management",  
+              courseDesc: "Building upon the competencies of epidemiology and biostatistics, we will explore surveillance, mitigation, preparedness, and response and recovery (from natural and “man made” emergency events). You will develop familiarity with the major categories and classifications of disaster events, including weapons of mass destruction, including how the public health system integrates with the National Response Plan and Framework.",
+              termOffered: "Summer-1 2018",
+              midProcExam: NULL,
+              finProcExam: "June 25th-July 1st",
+              hpmReq: "Elective",
+              intReq: "Elective"                  
+                      
+              },{       
+              },{                      
+          
+              courseNum: "PHW204",
+              courseEnrollNum: 14859,
+              ourseName: "Mass Communications in Public Health",  
+              courseDesc:  "You will employ digital innovations and social media to promote healthy behaviors and policy in 6 online weeks. Several guests will visit the online class, including public health professional who are currently engaged in new media and digital communications activities.",
+              termOffered: "Summer-2 2018", 
+              midProcExam: TBA, 
+              finProcExam: NULL,
+              hpmReq: "Elective",
+              intReq: "Elective"                    
+                        
+              },{
+              },{                      
+          
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+                
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+  
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                  
+
+              },{
+              },{                      
+                
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                    
+              },{
+              },{                      
+            
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                      
+              },{
+              },{                      
+          
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                        
+              },{
+              },{                      
+          
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+                
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+    
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                         
+              },{
+              },{                      
+
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+                
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                    
+              },{
+              },{                      
+            
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                      
+              },{
+              },{                      
+          
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                        
+              },{
+              },{                      
+          
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+                
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+    
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:         
+                            
+              },{
+              },{                      
+                
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                    
+              },{
+              },{                      
+            
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                      
+              },{
+              },{                      
+          
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                        
+              },{
+              },{                      
+          
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+                
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:                     
+                  
+              },{
+              },{                      
+
+              courseNum: 
+              courseEnrollNum: 
+              ourseName:  
+              courseDesc: 
+              termOffered: 
+              midProcExam: 
+              finProcExam: 
+              hpmReq:
+              intReq:
+
+              },{    
+              }]
+              }};
+    
   down: (queryInterface, Sequelize) => {
  
   };
 
-  
 
-// -- INSERT INTO courses (course_number, course_enrollment_num, course_name, course_description, term_offered, mid_proc_exam, fin_proc_exam, hpm_req, int_req)
+// -- (), 
 
-// -- VALUES ("PHW200E", 14857, "Health Policy and Management", "You will learn about health policy and management and health care delivery systems, primarily from a United States perspective. Discover how health policy and management applies concepts from economics, organizational behavior, and political science to the structure, financing, and regulation of public health and the health care delivery systems.", "Summer-1 2018", "May 28th-June 4th", NULL, "Required 1st year course", NULL);
-
-// -- ("PHW289", 14863, "Interdisciplinary Seminar",	"This multidisciplinary course draws from current topics and emerging competencies in public health professions to guide you in the tools and practices that lead to better solutions. The topics are delivered by discipline experts with whom you will engage in hands on workshops, lectures, and gatherings during a week long campus visit.", "Summer-1 2018", NULL, NULL, "Required 2nd Year Course", "Required 2nd Year Course");
-
-// -- ("PHW257", 16223, "Emergency Preparedness and Disaster Management", "Building upon the competencies of epidemiology and biostatistics, we will explore surveillance, mitigation, preparedness, and response and recovery (from natural and “man made” emergency events). You will develop familiarity with the major categories and classifications of disaster events, including weapons of mass destruction, including how the public health system integrates with the National Response Plan and Framework.", "Summer-1 2018", NULL, "June 25th-July 1st", "Elective", "Elective"), 
-
-// -- ("PHW204", 14859, "Mass Communications in Public Health", "You will employ digital innovations and social media to promote healthy behaviors and policy in 6 online weeks. Several guests will visit the online class, including public health professional who are currently engaged in new media and digital communications activities.", "Summer-2 2018", TBA, NULL, "Elective", "Elective"), 
+// -- (), 
 
 // -- ("PHW206", 14860, "Maternal Child Health Nutrition", "You will be presented with the major nutritional issues faced infants, children, adolescents and reproductive age women in the United States. Course topics include programs and interventions aimed at improving MCH nutrition, evidence based MCH nutrition practice guidelines, application of knowledge to food choices at a personal and programmatic level.", "Summer-2 2018", TBA, NULL, "Elective", "Elective"),
 
