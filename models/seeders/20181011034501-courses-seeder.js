@@ -71,88 +71,88 @@ module.exports = {
                         
               },{
               },{                      
-          
-              courseNum: 
-              courseEnrollNum: 
-              ourseName:  
-              courseDesc: 
-              termOffered: 
-              midProcExam: 
-              finProcExam: 
-              hpmReq:
-              intReq:                     
+                       
+              courseNum: "PHW206",
+              courseEnrollNum: 14860,
+              ourseName: "Maternal Child Health Nutrition",  
+              courseDesc: "You will be presented with the major nutritional issues faced infants, children, adolescents and reproductive age women in the United States. Course topics include programs and interventions aimed at improving MCH nutrition, evidence based MCH nutrition practice guidelines, application of knowledge to food choices at a personal and programmatic level.", 
+              termOffered: "Summer-2 2018",
+              midProcExam: TBA,
+              finProcExam: NULL,
+              hpmReq: "Elective",
+              intReq: "Elective"                   
+                  
+              },{
+              },{                      
+                      
+              courseNum: "PHW227A",
+              courseEnrollNum: 16273,
+              ourseName: "Healthcare Finance", 
+              courseDesc: "Through a case study format, employing the quantitative functions in Excel, you will gain the basic financial and accounting skills needed by all health professionals. Consider financial decision making in an applied manner, interpret financial statements and ratio analysis, and conduct investment assessments in discounted cash flow, healthcare pricing strategies, and cost-volume-profit/break-even analysis.",
+              termOffered: "Summer-2 2018",
+              midProcExam: "TBA",
+              finProcExam: NULL,
+              hpmReq: "Required Course",  
+              intReq: "Elective"                    
                   
               },{
               },{                      
 
-              courseNum: 
-              courseEnrollNum: 
-              ourseName:  
-              courseDesc: 
-              termOffered: 
-              midProcExam: 
-              finProcExam: 
-              hpmReq:
-              intReq:                     
+              courseNum: "PHW200G",
+              courseEnrollNum: 32092,
+              ourseName: "Health and Social Behavior",  
+              courseDesc: "With a focus on major social, cultural, and bio-behavioral determinants of health as they relate to behavioral interventions and policies, you will explore key concepts and important approaches in health and social behavior; assignments will culminate in a final group project involving a community health issue.",
+              termOffered: "Fall-1 2018", 
+              midProcExam: NULL,
+              finProcExam: NULL,
+              hpmReq: "Required 1st year course",
+              intReq: "Required 1st year course",                   
                   
               },{
               },{                      
-                
-              courseNum: 
-              courseEnrollNum: 
-              ourseName:  
-              courseDesc: 
-              termOffered: 
-              midProcExam: 
-              finProcExam: 
-              hpmReq:
-              intReq:                     
-                  
-              },{
-              },{                      
-  
-              courseNum: 
-              courseEnrollNum: 
-              ourseName:  
-              courseDesc: 
-              termOffered: 
-              midProcExam: 
-              finProcExam: 
-              hpmReq:
-              intReq:                  
+                      
+              courseNum: "PHW224", 
+              courseEnrollNum: 28909, 
+              ourseName: "Organizational Behavior & Management in Health Care", 
+              courseDesc: "A solid understanding of organizational behavior is critical for managing complex demands and arrangements in public health organizations. Through exploring the active theories and perspectives in management and organizational theory, you will gain a solid comprehension of a diverse set of frameworks and theories relevant to understanding healthcare delivery and public health organizations.",
+              termOffered: "Fall-1 2018",
+              midProcExam: NULL,
+              finProcExam: "Sep. 10th-16th",
+              hpmReq: "Required",
+              intReq: "Elective"                 
 
               },{
               },{                      
-                
-              courseNum: 
-              courseEnrollNum: 
-              ourseName:  
-              courseDesc: 
-              termOffered: 
-              midProcExam: 
-              finProcExam: 
-              hpmReq:
-              intReq:                     
+                        
+              courseNum: "PHW220",
+              courseEnrollNum: 32429,
+              ourseName: "Advanced Health Policy",  
+              courseDesc:	"Building on 200E,this course delves more deeply into the U.S. health care delivery system, including organization, financing, and current policy issues. You will become engaged as a health policy analyst, applying policymaking tools to actual health issues and problems.",
+              termOffered: "Fall-1 2018",
+              midProcExam: "Sep. 10th-16th",
+              finProcExam: NULL,
+              hpmReq: "Required",
+              intReq: "Elective"                    
                     
               },{
-              },{                      
-            
-              courseNum: 
-              courseEnrollNum: 
-              ourseName:  
-              courseDesc: 
-              termOffered: 
-              midProcExam: 
-              finProcExam: 
-              hpmReq:
-              intReq:                     
+              },{     
+
+              courseNum: "PHW260",
+              courseEnrollNum: 28927,
+              ourseName: "Infectious Disease", 
+              courseDesc: "More than 1400 different infectious diseases recognized today are distinct from other diseases because they affect all human organ systems and contribute to the burden of many other types of disease: 175 new such diseases have emerged in the past 30 years. You will explore the framework through which all infectious disease problems can be addressed.", 
+              termOffered: "Fall-1 2018",
+              midProcExam: NULL,
+              finProcExam: "Oct. 8th-14th",
+              hpmReq: "Elective",
+              intReq: "Elective"                 
                       
               },{
               },{                      
-          
-              courseNum: 
-              courseEnrollNum: 
-              ourseName:  
+                (   "You will further your exploration of principles and methods of epidemiology, including descriptive and analytic approaches to assessing the distribution of health, disease, and injury in populations and factors that influence those distributions. The emphasis is on concepts, rather than quantitative methods, but some basic calculations will be involved.", "Fall-1 2018", "Sept. 15-16", "Oct. 8th-14th", "Elective", "Elective"
+              courseNum: "PHW250F",
+              courseEnrollNum: 32427,
+              ourseName: "Epidemiologic Methods II Part A", 
               courseDesc: 
               termOffered: 
               midProcExam: 
@@ -419,19 +419,19 @@ module.exports = {
 
 // -- (), 
 
-// -- ("PHW206", 14860, "Maternal Child Health Nutrition", "You will be presented with the major nutritional issues faced infants, children, adolescents and reproductive age women in the United States. Course topics include programs and interventions aimed at improving MCH nutrition, evidence based MCH nutrition practice guidelines, application of knowledge to food choices at a personal and programmatic level.", "Summer-2 2018", TBA, NULL, "Elective", "Elective"),
+// -- (),
 
-// -- ("PHW227A", 16273, "Healthcare Finance", "Through a case study format, employing the quantitative functions in Excel, you will gain the basic financial and accounting skills needed by all health professionals. Consider financial decision making in an applied manner, interpret financial statements and ratio analysis, and conduct investment assessments in discounted cash flow, healthcare pricing strategies, and cost-volume-profit/break-even analysis.", "Summer-2 2018", "TBA", NULL, "Required Course", "Elective"), 
+// -- (), 
 
-// -- ("PHW200G", 32092, "Health and Social Behavior", "With a focus on major social, cultural, and bio-behavioral determinants of health as they relate to behavioral interventions and policies, you will explore key concepts and important approaches in health and social behavior; assignments will culminate in a final group project involving a community health issue.", "Fall-1 2018", NULL, NULL, "Required 1st year course", "Required 1st year course"), 
+// -- (), 
 
-// -- ("PHW224", 28909, "Organizational Behavior & Management in Health Care", "A solid understanding of organizational behavior is critical for managing complex demands and arrangements in public health organizations. Through exploring the active theories and perspectives in management and organizational theory, you will gain a solid comprehension of a diverse set of frameworks and theories relevant to understanding healthcare delivery and public health organizations.", "Fall-1 2018", NULL, "Sep. 10th-16th", "Required", "Elective"),
+// -- (),
 
-// -- ("PHW220", 32429, "Advanced Health Policy",	"Building on 200E, this course delves more deeply into the U.S. health care delivery system, including organization, financing, and current policy issues. You will become engaged as a health policy analyst, applying policymaking tools to actual health issues and problems.", "Fall-1 2018", "Sep. 10th-16th", NULL, "Required", "Elective"), 
+// -- (), 
 
-// -- ("PHW260", 28927, "Infectious Disease",	"More than 1400 different infectious diseases recognized today are distinct from other diseases because they affect all human organ systems and contribute to the burden of many other types of disease: 175 new such diseases have emerged in the past 30 years. You will explore the framework through which all infectious disease problems can be addressed.", "Fall-1 2018", NULL, "Oct. 8th-14th", "Elective", "Elective"), 
+// -- (), 
 
-// -- ("PHW250F", 32427, "Epidemiologic Methods II Part A", "You will further your exploration of principles and methods of epidemiology, including descriptive and analytic approaches to assessing the distribution of health, disease, and injury in populations and factors that influence those distributions. The emphasis is on concepts, rather than quantitative methods, but some basic calculations will be involved.", "Fall-1 2018", "Sept. 15-16", "Oct. 8th-14th", "Elective", "Elective"), 
+// -- ), 
 
 // -- ("PHW250", 32976, "Epidemiologic Methods", "Intended as a first class in epidemiology, you will study the principles and methods of epidemiology, including descriptive and analytic approaches to assessing the distributions of health, disease, and injury in populations. The emphasis is on developing an understanding of concepts, rather than quantitative methods, although calculations are involved.", "Fall-2 2018", "Nov. 12th-18th", "Dec. 10th-16th", "Required 1st year course", "Required 1st year course"),
 
