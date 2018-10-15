@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "Opt Out",
+    "title": "Take no course for Fall 2"
+  },
+  {
+    "id": 1,
+    "name": "PHW250",
+    "title": "Epidemiologic Methods"
+  },
+  {
+    "id": 2,
+    "name": "PHW226A",
+    "title": "Health Economics"
+  },
+  {
+    "id": 3,
+    "name": "PHW272C",
+    "title": "Applied Spatial Data Science for Public Health"
+  },
+  {
+    "id": 4,
+    "name": "PHW213",
+    "title": "Global Health Ethics"
+  },
+  {
+    "id": 5,
+    "name": "PHW250G",
+    "title": "Epidemiologic Methods II Part B"
+  }
+]

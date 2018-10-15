@@ -1,0 +1,68 @@
+.card {
+  background: rgb(255, 255, 255);
+  border-radius: 2px;
+  height: auto;
+  /* margin: .25rem; */
+  margin:10px 60px 0 0;
+  position: relative;
+  width: 400px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+}
+
+.card > .img-container {
+  height: 60%;
+  overflow: hidden;
+  text-align: center;
+  background:#6CADDC;
+}
+.card > .img-container > img {
+  width: 60%
+}
+.jumbotron{
+  margin-top: 82px;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+.card > .content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 15px;
+}
+
+.card > .content > ul {
+  list-style-type: none;
+}
+
+.card > .content > ul > li {
+  margin-top: 18px;
+}
+
+.card , .remove,h5 {
+  /* color: #ff1744; */
+  font-size: 18px;
+  position: relative;
+  float: left;
+  /* display: inherit; */
+  top: -20px;
+  /* right: 15px; */
+  cursor: pointer;
+}
+
+.card > .remove:hover {
+  color: #d50000;
+}
+.col-sm-6 {
+  /* background-color: #6CADDC; */
+  padding-left:70px;
+}
+
+.col-sm-12 {
+  margin-top:30px;
+}
+h3 {
+  text-align: left;
+  /* margin-left: 20px; */
+}

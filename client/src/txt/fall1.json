@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "Opt Out",
+    "title": "Take no course for Fall 1"
+  },
+  {
+    "id": 1,
+    "name": "PHW200G",
+    "title": "Health and Social Behavior"
+  },
+  {
+    "id": 2,
+    "name": "PHW224",
+    "title": "Organizational Behavior & Management in Health Care"
+  },
+  {
+    "id": 3,
+    "name": "PHW220",
+    "title": "Advanced Health Policy"
+  },
+  {
+    "id": 4,
+    "name": "PHW260",
+    "title": "Infectious Disease"
+  },
+  {
+    "id": 5,
+    "name": "PHW250F",
+    "title": "Epidemiologic Methods II Part A"
+  }
+]

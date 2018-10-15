@@ -87,11 +87,8 @@
             
 
     <script type="text/javascript">var site_uri = "https://onlinemph.berkeley.edu";var SITE_URI = "https://onlinemph.berkeley.edu";var theme_uri = "https://onlinemph.berkeley.edu/wp-content/themes/highstand";</script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"> -->
 
-    <link rel = "stylesheet" type="text/css" href="./style.css">
-    <!-- <link href="../src/components/CourseListings/CourseListings.css" rel="stylesheet"> -->
-
+    <link rel = "stylesheet" type="text/css" href="./stylesheets/style.css">
     </head>
 
 <body class="home page-template-default page page-id-5 page-parent bg-cover kingcomposer kc-css-system _masterslider _msp_version_2.29.0">
@@ -166,9 +163,9 @@
     <li id="menu-item-1332" class="buynowbuto menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-1332 yam-fwr"><a target="_blank" href="http://grad.berkeley.edu/admissions/apply/">Apply Now</a></li>
     <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="https://onlinemph.berkeley.edu/request-info/">Request Info</a></li>
     
-    <!-- <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="./signup.html">Sign up</a></li> -->
+    <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="./signup.html">Sign up</a></li>
    
-    <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="http://localhost:8080/">Log out</a></li>
+    <!-- <li id="menu-item-115" class="buynowbuto menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-115 yam-fwr"><a href="./login.html">Log in</a></li> -->
     </ul></div></nav></div></div></div>
     
     <script>
@@ -288,11 +285,28 @@ $("menu-item-117").click(function() {
     </div>
     <div class="kc-elm kc-css-951214" style="height: 20px; clear: both; width:100%;"></div></div></div></div></div></section><section class="kc-elm kc-css-649410 kc_row"><div class="kc-row-container  kc-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-385289 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"><div class="kc-elm kc-css-477835" style="height: 45px; clear: both; width:100%;"></div></div></div></div></div></section><section class="kc-elm kc-css-78374 kc_row"><div class="kc-row-container  kc-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-666833 kc_col-sm-6 kc_column kc_col-sm-6"><div class="kc-col-container"><div class="kc-elm kc-css-617167" style="height: 20px; clear: both; width:100%;"></div><div class="kc-elm kc-css-129854 kc_shortcode kc_single_image">
 <!-- STUFFF GOES HERE -->
-<noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
-</body>
+<!-- <div class="row">
+    <div class="col-md-4 col-md-offset-4"> -->
+      <h2>Login</h2>
+      <form class="login">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="email-input" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="password-input" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+      <br />
+      <p>Or sign up <a href="/signup.html">here</a></p>
+    <!-- </div>
+  </div> -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
 
 <!-- END STUFF -->
             <!-- <img src="https://onlinemph.berkeley.edu/wp-content/uploads/2018/02/Public-Health-Jobs.jpg.jpg" class="" alt="" />    </div> -->

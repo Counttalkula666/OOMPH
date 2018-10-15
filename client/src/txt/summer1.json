@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "Opt Out",
+    "title": "Take no course for Summer 1"
+  },
+  {
+    "id": 1,
+    "name": "PHW200E",
+    "title": "Health Policy and Management"
+  },
+  {
+    "id": 2,
+    "name": "PHW289",
+    "title": "Interdisciplinary Seminar"
+  },
+  {
+    "id": 3,
+    "name": "PHW257",
+    "title": "Emergency Preparedness and Disaster Management"
+  }
+]
