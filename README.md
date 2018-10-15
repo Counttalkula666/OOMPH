@@ -40,5 +40,5 @@ Credits:
 
 6. Special Thanks: 
     David Hallinan - https://www.linkedin.com/in/dhallinan/
-    Julie Radley Little
+    Julie Moss
     The TA team
